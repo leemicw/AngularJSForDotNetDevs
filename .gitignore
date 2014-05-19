@@ -10,6 +10,9 @@
 *.user
 *.sln.docstates
 
+#css map files
+*.css.map
+
 # Build results
 
 [Dd]ebug/

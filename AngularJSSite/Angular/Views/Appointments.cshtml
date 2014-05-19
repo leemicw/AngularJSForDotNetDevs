@@ -1,0 +1,14 @@
+﻿<h1>Appointments</h1>
+
+<table>
+    <tr>
+        <th ng-click="SortData('PatientId')">AppointmentId</th>
+        <th ng-click="SortData('FirstName')">Appointment Date</th>
+        <th ng-click="SortData('LastName')">Reason</th>
+    </tr>
+    <tr ng-repeat="appointment in appointments">
+        <td>{{ appointment.AppointmentId }}</td>
+        <td>{{ appointment.Time }}</td>
+        <td>{{ appointment.Reason }}</td>
+    </tr>
+</table>

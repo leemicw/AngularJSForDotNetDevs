@@ -1,0 +1,20 @@
+﻿@using System.Web.Optimization;
+<!DOCTYPE html>
+<html ng-app="PatientPortal">
+<head>
+    <title>Patient Portal</title>
+    @Styles.Render("~/cssBundles/ShellPage")
+</head>
+<body>
+    <header>Patient Portal</header>
+    <nav>
+        <ul>
+            <li><a href="#/">Home</a></li>
+            <li><a href="#/patients">Patients</a></li>
+            <li><a href="#/appointments">Appointments</a></li>
+        </ul>
+    </nav>
+    <div id="pageContainer" ng-view></div>
+    @Scripts.Render("~/jsBundles/ShellPageContent")
+</body>
+</html>

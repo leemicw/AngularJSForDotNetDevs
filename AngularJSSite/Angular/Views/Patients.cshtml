@@ -1,0 +1,22 @@
+﻿<h1>Patients Page</h1>
+
+Filter: <input type="text" ng-model="patientFilter" />
+
+<table>
+    <tr>
+        <th ng-click="SortData('PatientId')">PatientId</th>
+        <th ng-click="SortData('FirstName')">First Name</th>
+        <th ng-click="SortData('LastName')">Last Name</th>
+        <th>Appointments</th>
+    </tr>
+    <tr ng-repeat="patient in patients | filter:patientFilter">
+        <td>{{ patient.PatientId }}</td>
+        <td>{{ patient.FirstName }}</td>
+        <td>{{ patient.LastName }}</td>
+        <td><a href="#/appointments/{{ patient.PatientId }}">View Appointments</a></td>
+    </tr>
+</table>
+
+<p>
+    Data Provided by {{ DataProviderType }}
+</p>
