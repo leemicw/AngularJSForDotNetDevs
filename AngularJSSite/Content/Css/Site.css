@@ -39,4 +39,28 @@ table td {
 p {
   padding: 20px 0;
 }
+body.skip-animations * {
+  -webkit-transition: none!important;
+  -moz-transition: none!important;
+  -o-transition: none!important;
+  transition: none!important;
+}
+.tableAnimation {
+  -webkit-transition: 0.5s linear all;
+  -moz-transition: 0.5s linear all;
+  -o-transition: 0.5s linear all;
+  transition: 0.5s linear all;
+}
+.tableAnimation.ng-enter {
+  opacity: 0;
+}
+.tableAnimation.ng-enter-active {
+  opacity: 1;
+}
+.tableAnimation.ng-leave {
+  opacity: 1;
+}
+.tableAnimation.ng-leave-active {
+  opacity: 0;
+}
 /*# sourceMappingURL=Site.css.map */

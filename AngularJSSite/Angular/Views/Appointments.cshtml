@@ -1,6 +1,6 @@
 ﻿<h1>Appointments</h1>
 
-<table>
+<table ng-show="appointmentsLoaded">
     <tr>
         <th ng-click="SortData('PatientId')">AppointmentId</th>
         <th ng-click="SortData('FirstName')">Appointment Date</th>
@@ -8,7 +8,9 @@
     </tr>
     <tr ng-repeat="appointment in appointments">
         <td>{{ appointment.AppointmentId }}</td>
-        <td>{{ appointment.Time }}</td>
+        <td>{{ appointment.Time | date : 'MM-dd-yyyy'}}</td>
         <td>{{ appointment.Reason }}</td>
     </tr>
 </table>
+
+<br /><img src="~/Content/Images/Appointments/Loading.gif" ng-hide="appointmentsLoaded" alt="Loading Appointments">

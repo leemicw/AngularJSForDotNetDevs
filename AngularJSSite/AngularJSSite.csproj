@@ -125,11 +125,6 @@
   <ItemGroup>
     <Compile Include="API\Controllers\AppointmentController.cs" />
     <Compile Include="API\Controllers\PatientController.cs" />
-    <Compile Include="API\ViewModels\Account\AccountGetInput.cs" />
-    <Compile Include="API\ViewModels\Account\AccountLoginInput.cs" />
-    <Compile Include="API\ViewModels\Account\AccountGetOutput.cs" />
-    <Compile Include="API\ViewModels\Account\AccountLoginOutput.cs" />
-    <Compile Include="API\ViewModels\Account\SampleFileUploadInput.cs" />
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="Infrastructure\Appointment.cs" />
@@ -145,8 +140,8 @@
   <ItemGroup>
     <Content Include="Angular\app.js" />
     <Content Include="Angular\Controllers\AppointmentsController.js" />
-    <Content Include="Angular\Controllers\Error404Controller.js" />
     <Content Include="Angular\Controllers\HomeController.js" />
+    <Content Include="Angular\Controllers\PatientAddController.js" />
     <Content Include="Angular\Factories\AppointmentFactory.js" />
     <Content Include="Angular\Testing\MinTesting.js" />
     <Content Include="Angular\Controllers\PatientsController.js" />
@@ -445,6 +440,7 @@
     <Content Include="Content\Css\Site.css.map">
       <DependentUpon>Site.css</DependentUpon>
     </Content>
+    <Content Include="Angular\Views\PatientAdd.cshtml" />
     <None Include="Content\Css\Site.less" />
     <Content Include="Scripts\_references.js" />
   </ItemGroup>
@@ -513,9 +509,9 @@
         <WebProjectProperties>
           <UseIIS>True</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
-          <DevelopmentServerPort>59511</DevelopmentServerPort>
+          <DevelopmentServerPort>59514</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost:59511/</IISUrl>
+          <IISUrl>http://localhost:59514/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>

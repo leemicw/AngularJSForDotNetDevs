@@ -11,6 +11,7 @@ namespace AngularJSSite
 			bundles.Add(new ScriptBundle("~/jsBundles/ShellPageContent").Include(
 					  "~/Scripts/Angular.js",
 					  "~/Scripts/Angular-route.js",
+					  "~/Scripts/Angular-animate.js",
 					  "~/Angular/app.js",
 					  "~/Angular/Controllers/*Controller.js",
 					  "~/Angular/Factories/*Factory.js",

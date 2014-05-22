@@ -1,6 +1,6 @@
 ﻿(function () {
 
-	var app = angular.module('PatientPortal', ['ngRoute']);
+	var app = angular.module('PatientPortal', ['ngRoute', 'ngAnimate']);
 
 	app.config(function ($routeProvider) {
 		$routeProvider
@@ -12,12 +12,15 @@
 				controller: 'PatientsController',
 				templateUrl: 'Angular/Views/Patients.cshtml'
 			})
+			.when('/patientAdd', {
+				controller: 'PatientAddController',
+				templateUrl: 'Angular/Views/PatientAdd.cshtml'
+			})
 			.when('/appointments/:patientId', {
 				controller: 'AppointmentsController',
 				templateUrl: 'Angular/Views/Appointments.cshtml'
 			})
 			.otherwise({
-				controller: 'Error404Controller',
 				templateUrl: 'Angular/Views/Error404.cshtml'
 			});
 	});

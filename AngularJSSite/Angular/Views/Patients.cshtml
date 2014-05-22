@@ -4,12 +4,12 @@ Filter: <input type="text" ng-model="patientFilter" />
 
 <table>
     <tr>
-        <th ng-click="SortData('PatientId')">PatientId</th>
-        <th ng-click="SortData('FirstName')">First Name</th>
-        <th ng-click="SortData('LastName')">Last Name</th>
+        <th>PatientId</th>
+        <th>First Name</th>
+        <th>Last Name</th>
         <th>Appointments</th>
     </tr>
-    <tr ng-repeat="patient in patients | filter:patientFilter">
+    <tr ng-repeat="patient in patients | filter:patientFilter" class="tableAnimation">
         <td>{{ patient.PatientId }}</td>
         <td>{{ patient.FirstName }}</td>
         <td>{{ patient.LastName }}</td>
@@ -20,3 +20,4 @@ Filter: <input type="text" ng-model="patientFilter" />
 <p>
     Data Provided by {{ DataProviderType }}
 </p>
+

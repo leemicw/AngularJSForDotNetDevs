@@ -35,14 +35,18 @@ namespace AngularJSSite.Infrastructure
 			return _Patients;
 		}
 
-		//public static Patient GetPatient(int patientId) {
-		//	foreach(Patient p in _Patients) {
-		//		if(p.PatientId == patientId) {
-		//			return p;
-		//		}
-		//	}
-		//	return null;
-		//}
+		public static Patient SavePatient(Patient PatientToSave) {
+			Patient result = null;
+			if(PatientToSave.PatientId == 0) {
+				int maxPatientId = _Patients.Max(x => x.PatientId);
+				_Patients.Add(new Patient() { PatientId = maxPatientId + 1, FirstName = PatientToSave.FirstName, LastName = PatientToSave.LastName });
+				result = _Patients.ElementAt(maxPatientId);
+			}
+			else{
+				//do edit here. 
+			}
+			return result;
+		}
 
 		public static IEnumerable<Appointment> GetAppointments(int patientId) {
 			foreach(Patient p in _Patients) {

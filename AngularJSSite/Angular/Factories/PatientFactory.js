@@ -7,6 +7,14 @@
 			return $http.get('/api/Patient/GetPatients');
 		}
 
+		factory.SavePatient = function (patient) {
+			return $http({
+				url: '/api/Patient/SavePatient',
+				method: 'POST',
+				data: patient
+			});
+		}
+
 		factory.ProviderType = 'Factory';
 
 		return factory;
