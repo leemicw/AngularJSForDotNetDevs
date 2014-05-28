@@ -5,7 +5,6 @@
 	app.config(function ($routeProvider) {
 		$routeProvider
 			.when('/', {
-				controller: 'HomeController',
 				templateUrl: 'Angular/Views/Home.cshtml'
 			})
 			.when('/patients', {

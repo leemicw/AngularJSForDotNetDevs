@@ -140,7 +140,6 @@
   <ItemGroup>
     <Content Include="Angular\app.js" />
     <Content Include="Angular\Controllers\AppointmentsController.js" />
-    <Content Include="Angular\Controllers\HomeController.js" />
     <Content Include="Angular\Controllers\PatientAddController.js" />
     <Content Include="Angular\Factories\AppointmentFactory.js" />
     <Content Include="Angular\Testing\MinTesting.js" />
