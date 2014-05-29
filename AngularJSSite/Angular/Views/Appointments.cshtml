@@ -2,9 +2,9 @@
 
 <table ng-show="appointmentsLoaded">
     <tr>
-        <th ng-click="SortData('PatientId')">AppointmentId</th>
-        <th ng-click="SortData('FirstName')">Appointment Date</th>
-        <th ng-click="SortData('LastName')">Reason</th>
+        <th>AppointmentId</th>
+        <th>Appointment Date</th>
+        <th>Reason</th>
     </tr>
     <tr ng-repeat="appointment in appointments">
         <td>{{ appointment.AppointmentId }}</td>
